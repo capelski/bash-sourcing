@@ -6,21 +6,67 @@ Educative purposes repository with different approaches to sourcing (i.e. execut
 
 Source the script file by specifying the path **relative to the original file**.
 
-- ✅ Runs successfully when executing it from current folder
-- ❌ Fails to run when executing it from parent folder
+✅ Runs successfully when executing it from current folder
+```bash
+$ ./1-relative-path.sh
+Successfully sourced dependency.sh!
+```
+❌ Fails to run when executing it from parent folder
+```bash
+$ cd ..
+$ ./bash-sourcing/1-relative-path.sh
+./bash-sourcing/1-relative-path.sh: line 1: ./dependency.sh: No such file or directory
+```
 
 ## 2-dirname.sh
 
 Source the script file by specifying the path **relative to the folder of the original file**.
 
-- ✅ Runs successfully when executing it from current folder
-- ✅ Runs successfully when executing it from parent folder
-- ❌ Fails to run when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
+✅ Runs successfully when executing it from current folder
+```bash
+$ ./2-dirname.sh
+dirname: . (~/bash-sourcing)
+Successfully sourced dependency.sh!
+```
+✅ Runs successfully when executing it from parent folder
+```bash
+$ cd ..
+$ ./bash-sourcing/2-dirname.sh
+dirname: ./bash-sourcing (~)
+Successfully sourced dependency.sh!
+```
+❌ Fails to run when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
+```bash
+$ ./cd-script.sh 2-dirname.sh
+previous dirname: . (~/bash-sourcing)
+dirname: . (~)
+./bash-sourcing/2-dirname.sh: line 5: ./dependency.sh: No such file or directory
+```
 
 ## 3-bash-source.sh
 
 Source the script file by specifying the path **relative to the path of the original file**.
 
-- ✅ Runs successfully when executing it from current folder
-- ✅ Runs successfully when executing it from parent folder
-- ✅ Runs successfully when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
+✅ Runs successfully when executing it from current folder
+```bash
+$ ./3-bash-source.sh
+dirname: . (~/bash-sourcing)
+BASH_SOURCE: ./3-bash-source.sh
+Successfully sourced dependency.sh!
+```
+✅ Runs successfully when executing it from parent folder
+```bash
+$ cd ..
+$ ./bash-sourcing/3-bash-source.sh
+dirname: ./bash-sourcing (~)
+BASH_SOURCE: ./bash-sourcing/3-bash-source.sh
+Successfully sourced dependency.sh!
+```
+✅ Runs successfully when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
+```bash
+$ ./cd-script.sh 3-bash-source.sh
+preivous dirname: . (~/bash-sourcing)
+dirname: . (~)
+BASH_SOURCE: ./bash-sourcing/3-bash-source.sh
+Successfully sourced dependency.sh!
+```
