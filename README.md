@@ -15,12 +15,12 @@ Source the script file by specifying the path **relative to the folder of the or
 
 - ✅ Runs successfully when executing it from current folder
 - ✅ Runs successfully when executing it from parent folder
-- ❌ Fails to run when sourcing it from a script that changes the working directory (e.g. cd-script.sh)
+- ❌ Fails to run when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
 
-## 3-bash-source.sh
+## 3-bash-source.sh
 
 Source the script file by specifying the path **relative to the path of the original file**.
 
 - ✅ Runs successfully when executing it from current folder
 - ✅ Runs successfully when executing it from parent folder
-- ✅ Runs successfully when sourcing it from a script that changes the working directory (e.g. cd-script.sh)
+- ✅ Runs successfully when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
