@@ -1,6 +1,6 @@
 source ./dependency.sh
 
-# ✅ Runs successully when executing it from current folder:
+# ✅ Runs successfully when executing it from current folder:
 #   % ./1-relative-path.sh
 #   Successfully sourced dependency.sh!
 

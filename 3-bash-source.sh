@@ -8,13 +8,13 @@ if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 
 source "$DIR/dependency.sh"
 
-# ✅ Runs successully when executing it from current folder:
+# ✅ Runs successfully when executing it from current folder:
 #   $ ./3-bash-source.sh
 #   dirname: . (~/bash-sourcing)
 #   BASH_SOURCE: ./3-bash-source.sh
 #   Successfully sourced dependency.sh!
 
-# ✅ Runs successully when executing it from parent folder:
+# ✅ Runs successfully when executing it from parent folder:
 #   $ cd ..
 #   $ ./bash-sourcing/3-bash-source.sh
 #   dirname: ./bash-sourcing (~)

@@ -4,12 +4,12 @@ echo "dirname: $dirName ($PWD)"
 
 source "$dirName/dependency.sh"
 
-# ✅ Runs successully when executing it from current folder:
+# ✅ Runs successfully when executing it from current folder:
 #   $ ./2-dirname.sh
 #   dirname: . (~/bash-sourcing)
 #   Successfully sourced dependency.sh!
 
-# ✅ Runs successully when executing it from parent folder:
+# ✅ Runs successfully when executing it from parent folder:
 #   $ cd ..
 #   $ ./bash-sourcing/2-dirname.sh
 #   dirname: ./bash-sourcing (~)
