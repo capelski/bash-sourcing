@@ -9,7 +9,7 @@ if [ -z $script ]; then
 fi
 
 dirName="$(dirname $0)"
-echo "preivous dirname: $dirName ($PWD)"
+echo "previous dirname: $dirName ($PWD)"
 
 cd ..
 

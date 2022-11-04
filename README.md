@@ -65,7 +65,7 @@ Successfully sourced dependency.sh!
 ✅ Runs successfully when sourcing it from a script that changes the working directory *(e.g. cd-script.sh)*
 ```bash
 $ ./cd-script.sh 3-bash-source.sh
-preivous dirname: . (~/bash-sourcing)
+previous dirname: . (~/bash-sourcing)
 dirname: . (~)
 BASH_SOURCE: ./bash-sourcing/3-bash-source.sh
 Successfully sourced dependency.sh!
